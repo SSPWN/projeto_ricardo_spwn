@@ -19,15 +19,13 @@ public class Vetor<T> {
     }
 
     public void buscar(T chave) {
-        int h = hash(chave.toString());
-        if (this.vetor[h] != null && this.vetor[h].equals(h)) {
-            System.out.println("Elemento encontrado na posição " + h);
-            System.out.println(this.vetor[h]);
-        } else {
-            System.out.println("Elemento não encontrado na tabela hash.");
+        for (int i = 0; i < this.tamanho; i++) {
+            if (this.vetor[i] != null && this.vetor[i].equals(chave)) {
+                System.out.println("Elemento encontrado na posição " + i);
+                System.out.println(this.vetor[i]);
+            }
         }
     }
-
 
     public void remove() {
         if (this.vetor[hash] != null) {

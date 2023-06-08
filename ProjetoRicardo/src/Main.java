@@ -53,22 +53,20 @@ public class Main {
                 chave = scanner.next();
 
                 for (int i = 0; i < 1; i++) {
-
-
                     System.out.print("Time = ");
                     vetor.hash(chave);
-                    vetor.remove();
                     vetor.mostrar(i);
+                    vetor.remove();
 
                     System.out.print("Pontuação = ");
                     vetorInt.hash(chave);
-                    vetorInt.remove();
                     vetorInt.mostrar(i);
+                    vetorInt.remove();
 
                     System.out.print("Média de gols = ");
                     vetorFloat.hash(chave);
-                    vetorFloat.remove();
                     vetorFloat.mostrar(i);
+                    vetorFloat.remove();
                 }
 
             }else if (pesq ==3){
