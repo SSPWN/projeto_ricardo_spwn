@@ -55,26 +55,26 @@ public class Main {
                 for (int i = 0; i < 1; i++) {
                     System.out.print("Time = ");
                     vetor.hash(chave);
-                    vetor.mostrar(i);
+                    vetor.consultar();
                     vetor.remove();
 
                     System.out.print("Pontuação = ");
                     vetorInt.hash(chave);
-                    vetorInt.mostrar(i);
+                    vetorInt.consultar();
                     vetorInt.remove();
 
                     System.out.print("Média de gols = ");
                     vetorFloat.hash(chave);
-                    vetorFloat.mostrar(i);
+                    vetorFloat.consultar();
                     vetorFloat.remove();
                 }
 
             }else if (pesq ==3){
                 System.out.println("Time | " + "Pontuação | " + "Média de gols |");
                 for (int i = 0; i < tamanho; i++) {
-                    vetor.mostrar(i);
-                    vetorInt.mostrar(i);
-                    vetorFloat.mostrar(i);
+                    vetor.tabela(i);
+                    vetorInt.tabela(i);
+                    vetorFloat.tabela(i);
                     System.out.println("");
                 }
             } else {

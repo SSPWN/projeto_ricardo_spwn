@@ -14,7 +14,11 @@ public class Vetor<T> {
         this.vetor[hash] = elemento;
     }
 
-    public void mostrar(int i) {
+    public void consultar() {
+        System.out.print(this.vetor[hash] + " | ");
+    }
+
+    public void tabela(int i) {
         System.out.print(this.vetor[i] + " | ");
     }
 
