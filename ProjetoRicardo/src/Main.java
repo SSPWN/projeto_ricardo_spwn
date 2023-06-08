@@ -84,6 +84,9 @@ public class Main {
                     vetorFloat.tabela(i);
                     System.out.println("");
                 }
+            //finalizar
+            }else if(pesq == 4){
+                System.out.println("Thanks");
             } else {
                 System.out.println("Tente novamente!");
             }

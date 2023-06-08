@@ -10,18 +10,22 @@ public class Vetor<T> {
         this.vetor = (T[]) new Object[capacidade];
     }
 
+    //método para inserir dados no vetor
     public void inserir(T elemento) {
         this.vetor[hash] = elemento;
     }
 
+    //método para consultar um índice na tabela
     public void consultar() {
         System.out.print(this.vetor[hash] + " | ");
     }
 
+    //método para mostrar a tabela completa
     public void tabela(int i) {
         System.out.print(this.vetor[i] + " | ");
     }
 
+    //método para pesquisar o time na tabela
     public void buscar(T chave) {
             if (this.vetor[hash] != null && this.vetor[hash].equals(chave)) {
                 hash += 1;
@@ -31,7 +35,7 @@ public class Vetor<T> {
             }
         }
     
-
+    //método para remover dados de um indice da tabela
     public void remove() {
         if (this.vetor[hash] != null) {
             this.vetor[hash] = null;
@@ -40,6 +44,7 @@ public class Vetor<T> {
         }
     }
 
+    //método para calcular o índice 
     public int hash(String string) {
         int a = 31; // qualquer numero primo
         for (int i = 0; i < string.length(); i++) {
