@@ -6,14 +6,16 @@ public class Main {
         int tamanho, pont, gols, jogos, pesq = 0;
         String string, chave;
         float media;
+
         // Definindo o tamanho do vetor
-        System.out.print("Tamanho Vetor: ");
+        System.out.print("Quantidade de times: ");
         tamanho = scanner.nextInt();
 
         //instanciando e definindo o tamanho do vetor
         Vetor<String> vetor = new Vetor(tamanho);
         Vetor<Integer> vetorInt = new Vetor(tamanho);
         Vetor<Float> vetorFloat = new Vetor(tamanho);
+
         //inserindo dados
         for (int i = 0; i < tamanho; i++) {
             System.out.println("");
@@ -35,6 +37,7 @@ public class Main {
             vetorFloat.hash(string);
             vetorFloat.inserir(media);
         }
+        //menu para buscar, remover ou mostrar a tabela
         while (pesq != 4) {
             System.out.println(" ");
             System.out.println("1-Buscar");
@@ -43,16 +46,20 @@ public class Main {
             System.out.println("4-Sair");
             pesq = scanner.nextInt();
 
+            //buscar time
             if (pesq == 1) {
                 System.out.print("Time a ser buscado: ");
                 chave = scanner.next();
+                vetor.hash(chave);
                 vetor.buscar(chave);
 
+            // remover time
             } else if (pesq == 2) {
-                System.out.println("Time a ser removido");
+                System.out.println("Time a ser removido: ");
                 chave = scanner.next();
 
                 for (int i = 0; i < 1; i++) {
+                    System.out.println("Elemento a ser removido:");
                     System.out.print("Time = ");
                     vetor.hash(chave);
                     vetor.consultar();
@@ -68,7 +75,7 @@ public class Main {
                     vetorFloat.consultar();
                     vetorFloat.remove();
                 }
-
+            //mostrar tabela completa
             }else if (pesq ==3){
                 System.out.println("Time | " + "Pontuação | " + "Média de gols |");
                 for (int i = 0; i < tamanho; i++) {
@@ -78,7 +85,7 @@ public class Main {
                     System.out.println("");
                 }
             } else {
-                System.out.println("thanks!");
+                System.out.println("Tente novamente!");
             }
         }
     }
