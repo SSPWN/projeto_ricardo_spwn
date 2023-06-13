@@ -59,6 +59,7 @@ public class Main {
                 chave = scanner.next();
 
                 for (int i = 0; i < 1; i++) {
+                    System.out.println(" ");
                     System.out.println("Elemento a ser removido:");
                     System.out.print("Time = ");
                     vetor.hash(chave);
